@@ -1,0 +1,76 @@
+/* 布局背景色，淡灰不刺眼 */
+body {
+  background-color: #f5f7fa;
+}
+
+/* 主内容卡片美化 */
+.intro {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  line-height: 1.8;
+  font-size: 17px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.intro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* 标题美化 */
+.intro h2, .intro h3 {
+  font-weight: 600;
+  color: #222;
+  margin-top: 1.5rem;
+}
+
+.intro h2 {
+  font-size: 1.8rem;
+}
+
+.intro h3 {
+  font-size: 1.4rem;
+}
+
+/* 列表美化 */
+.intro ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+}
+
+.intro li {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding-left: 1.2em;
+}
+
+.intro li::before {
+  content: '👉';
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+/* 引用样式 */
+.intro blockquote {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #bbb;
+  font-style: italic;
+  color: #666;
+  border-radius: 6px;
+}
+
+/* 分隔线 */
+.intro hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
