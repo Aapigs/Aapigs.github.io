@@ -1,0 +1,970 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/demo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Bernicegutkowski">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="睡眠计算器              * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          body {             font-family: -apple-system, BlinkMacSys">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page.title">
+<meta property="og:url" content="http://example.com/custom/tools/sleep_calculator.html">
+<meta property="og:site_name" content="AAAa">
+<meta property="og:description" content="睡眠计算器              * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          body {             font-family: -apple-system, BlinkMacSys">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-07-10T15:21:56.118Z">
+<meta property="article:modified_time" content="2025-07-10T15:18:10.623Z">
+<meta property="article:author" content="Bernicegutkowski">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>page.title - AAAa</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/about.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>AAAa</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>Links</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-tool"></i>
+                <span>Tools</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/custom/tools/pwd.html" target="_self">
+                    
+                    <span>PWD</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                <span>Document</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/resources/" target="_self">
+                    
+                    <span>Resource</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/webpicks/" target="_self">
+                    
+                    <span>Web Picks</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="page.title"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes fadeInStagger {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInStagger 0.8s ease-out 0.2s both;
+        }
+
+        .moon-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            animation: float 4s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+        }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-8px) rotate(2deg);
+            }
+            50% { 
+                transform: translateY(-12px) rotate(0deg);
+            }
+            75% {
+                transform: translateY(-8px) rotate(-2deg);
+            }
+        }
+
+        h1 {
+            color: #2d3748;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #718096;
+            font-size: 16px;
+        }
+
+        .input-group {
+            margin-bottom: 24px;
+            animation: fadeInStagger 0.6s ease-out 0.4s both;
+        }
+
+        label {
+            display: block;
+            color: #4a5568;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        input[type="time"] {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 16px;
+            background: white;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #2d3748;
+            will-change: transform, box-shadow;
+        }
+
+        input[type="time"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15), 0 8px 25px rgba(102, 126, 234, 0.1);
+            transform: translateY(-3px);
+        }
+
+        input[type="time"]:focus + label {
+            color: #667eea;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+            animation: fadeInStagger 0.6s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 16px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            will-change: transform, box-shadow;
+            transform: translateZ(0);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f7fafc;
+            color: #4a5568;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e0;
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+            transition: all 0.2s ease;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .result {
+            background: linear-gradient(135deg, #4fd1c7 0%, #38b2ac 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 24px;
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(79, 209, 199, 0.3);
+            will-change: transform, opacity;
+        }
+
+        .result.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .result h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            animation: slideInFromTop 0.8s ease-out 0.2s both;
+        }
+
+        .sleep-times {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .sleep-time {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 8px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+            will-change: transform, opacity;
+        }
+
+        .sleep-time:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .sleep-time.animate {
+            animation: slideInFromBottom 0.5s ease-out forwards;
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tip {
+            background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+            color: #744210;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 16px;
+            font-size: 14px;
+            border-left: 4px solid #f6ad55;
+            animation: fadeInStagger 0.6s ease-out 0.8s both;
+            box-shadow: 0 4px 12px rgba(244, 173, 85, 0.15);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px;
+            }
+            
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="moon-icon">🌙</div>
+            <h1>睡眠计算器</h1>
+            <p class="subtitle">找到最佳的睡眠时间</p>
+        </div>
+
+        <div class="input-group">
+            <label for="wakeTime">起床时间</label>
+            <input type="time" id="wakeTime" value="07:00">
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="calculateSleepTimes()">
+                <span>⏰ 计算睡眠时间</span>
+            </button>
+            <button class="btn btn-secondary" onclick="calculateWakeTime()">
+                <span>🛏️ 计算起床时间</span>
+            </button>
+        </div>
+
+        <div class="input-group" id="sleepTimeInput" style="display: none;">
+            <label for="sleepTime">睡觉时间</label>
+            <input type="time" id="sleepTime" value="23:00">
+        </div>
+
+        <div class="result" id="result"></div>
+
+        <div class="tip">
+            💡 <strong>小贴士：</strong>一个完整的睡眠周期大约90分钟，包含浅睡、深睡和快速眼动睡眠。在睡眠周期结束时醒来会感觉更加精神。
+        </div>
+    </div>
+
+    <script>
+        function calculateSleepTimes() {
+            const wakeTimeInput = document.getElementById('wakeTime');
+            const resultDiv = document.getElementById('result');
+            const sleepTimeInput = document.getElementById('sleepTimeInput');
+            
+            sleepTimeInput.style.display = 'none';
+            
+            if (!wakeTimeInput.value) {
+                alert('请先设置起床时间');
+                return;
+            }
+
+            const wakeTime = new Date();
+            const [hours, minutes] = wakeTimeInput.value.split(':');
+            wakeTime.setHours(parseInt(hours), parseInt(minutes), 0, 0);
+
+            // 计算建议的睡觉时间（考虑15分钟入睡时间）
+            const sleepCycles = [6, 5, 4, 3]; // 睡眠周期数
+            const cycleLength = 90; // 90分钟一个周期
+            const fallAsleepTime = 15; // 15分钟入睡时间
+
+            let sleepTimes = [];
+            
+            sleepCycles.forEach(cycles => {
+                const totalSleepMinutes = cycles * cycleLength;
+                const bedTime = new Date(wakeTime.getTime() - (totalSleepMinutes + fallAsleepTime) * 60000);
+                
+                // 如果计算出的睡觉时间是第二天，调整到前一天
+                if (bedTime.getDate() !== wakeTime.getDate()) {
+                    bedTime.setDate(bedTime.getDate() - 1);
+                }
+                
+                sleepTimes.push({
+                    time: bedTime.toLocaleTimeString('zh-CN', { 
+                        hour: '2-digit', 
+                        minute: '2-digit',
+                        hour12: false 
+                    }),
+                    cycles: cycles,
+                    hours: (totalSleepMinutes / 60).toFixed(1)
+                });
+            });
+
+            displaySleepTimes(sleepTimes, wakeTimeInput.value);
+        }
+
+        function calculateWakeTime() {
+            const sleepTimeInput = document.getElementById('sleepTimeInput');
+            const sleepTime = document.getElementById('sleepTime');
+            const resultDiv = document.getElementById('result');
+            
+            sleepTimeInput.style.display = 'block';
+            
+            if (!sleepTime.value) {
+                alert('请先设置睡觉时间');
+                return;
+            }
+
+            const bedTime = new Date();
+            const [hours, minutes] = sleepTime.value.split(':');
+            bedTime.setHours(parseInt(hours), parseInt(minutes), 0, 0);
+
+            const sleepCycles = [6, 5, 4, 3];
+            const cycleLength = 90;
+            const fallAsleepTime = 15;
+
+            let wakeTimes = [];
+            
+            sleepCycles.forEach(cycles => {
+                const totalSleepMinutes = cycles * cycleLength;
+                const wakeTime = new Date(bedTime.getTime() + (totalSleepMinutes + fallAsleepTime) * 60000);
+                
+                wakeTimes.push({
+                    time: wakeTime.toLocaleTimeString('zh-CN', { 
+                        hour: '2-digit', 
+                        minute: '2-digit',
+                        hour12: false 
+                    }),
+                    cycles: cycles,
+                    hours: (totalSleepMinutes / 60).toFixed(1)
+                });
+            });
+
+            displayWakeTimes(wakeTimes, sleepTime.value);
+        }
+
+        function displaySleepTimes(times, wakeTime) {
+            const resultDiv = document.getElementById('result');
+            
+            let html = `
+                <h3>💤 建议睡觉时间 (起床时间: ${wakeTime})</h3>
+                <div class="sleep-times">
+            `;
+            
+            times.forEach((item, index) => {
+                const quality = index === 0 ? '最佳' : index === 1 ? '良好' : '一般';
+                html += `
+                    <div class="sleep-time" style="animation-delay: ${0.1 + index * 0.1}s;">
+                        <div style="font-size: 16px; font-weight: 600;">${item.time}</div>
+                        <div style="font-size: 12px; opacity: 0.8;">${item.hours}h · ${quality}</div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            resultDiv.innerHTML = html;
+            
+            // 重置结果样式
+            resultDiv.classList.remove('show');
+            
+            // 显示结果动画
+            setTimeout(() => {
+                resultDiv.classList.add('show');
+                // 为睡眠时间卡片添加动画
+                const sleepTimeCards = document.querySelectorAll('.sleep-time');
+                sleepTimeCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('animate');
+                    }, 300 + index * 100);
+                });
+            }, 100);
+        }
+
+        function displayWakeTimes(times, sleepTime) {
+            const resultDiv = document.getElementById('result');
+            
+            let html = `
+                <h3>⏰ 建议起床时间 (睡觉时间: ${sleepTime})</h3>
+                <div class="sleep-times">
+            `;
+            
+            times.forEach((item, index) => {
+                const quality = index === 0 ? '最佳' : index === 1 ? '良好' : '一般';
+                html += `
+                    <div class="sleep-time" style="animation-delay: ${0.1 + index * 0.1}s;">
+                        <div style="font-size: 16px; font-weight: 600;">${item.time}</div>
+                        <div style="font-size: 12px; opacity: 0.8;">${item.hours}h · ${quality}</div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            resultDiv.innerHTML = html;
+            
+            // 重置结果样式
+            resultDiv.classList.remove('show');
+            
+            // 显示结果动画
+            setTimeout(() => {
+                resultDiv.classList.add('show');
+                // 为睡眠时间卡片添加动画
+                const sleepTimeCards = document.querySelectorAll('.sleep-time');
+                sleepTimeCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('animate');
+                    }, 300 + index * 100);
+                });
+            }, 100);
+        }
+
+        // 页面加载时隐藏结果
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('result').classList.remove('show');
+        });
+    </script>
+</body>
+</html>
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.fluid-dev.com/docs" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-love"></i> <a href="https://www.github.com" target="_blank" rel="nofollow noopener"><span>Github</span></a> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP证543269号
+    </a>
+  </span>
+  
+    
+      <span>
+        <a
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=78345081"
+          rel="nofollow noopener"
+          class="beian-police"
+          target="_blank"
+        >
+          
+            <span style="visibility: hidden; width: 0">|</span>
+            <img src="/img/police_beian.png" srcset="/img/loading.gif" lazyload alt="police-icon"/>
+          
+          <span>京公网安备78345081号</span>
+        </a>
+      </span>
+    
+  
+</div>
+
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
