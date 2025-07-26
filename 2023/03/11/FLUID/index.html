@@ -21,16 +21,16 @@
   <meta name="author" content="Bernicegutkowski">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hexo + Fluid 主题 + GitHub Pages 部署完整教程 1. 安装 GitGit 是版本控制工具，也是上传博客的基础。  Windows:  去 https:&#x2F;&#x2F;git-scm.com&#x2F;downloads 下载并安装  macOS:  在终端执行 git --version，如果没装系统会提示安装 Xcode Command Line Tools，按提示安装即可  Linux:">
+    <meta name="description" content="Complete Tutorial: Hexo + Fluid Theme + GitHub Pages Deployment  Before getting started, you’ll need to register a free account on GitHub, which we’ll use later to deploy our static website. After cre">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FLUID">
 <meta property="og:url" content="http://example.com/2023/03/11/FLUID/index.html">
 <meta property="og:site_name" content="AAAa">
-<meta property="og:description" content="Hexo + Fluid 主题 + GitHub Pages 部署完整教程 1. 安装 GitGit 是版本控制工具，也是上传博客的基础。  Windows:  去 https:&#x2F;&#x2F;git-scm.com&#x2F;downloads 下载并安装  macOS:  在终端执行 git --version，如果没装系统会提示安装 Xcode Command Line Tools，按提示安装即可  Linux:">
+<meta property="og:description" content="Complete Tutorial: Hexo + Fluid Theme + GitHub Pages Deployment  Before getting started, you’ll need to register a free account on GitHub, which we’ll use later to deploy our static website. After cre">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.miji.bid/2025/07/04/5a1739f53006a53246b6da1d79935924.jpeg">
 <meta property="article:published_time" content="2023-03-11T05:00:56.000Z">
-<meta property="article:modified_time" content="2025-07-25T15:45:40.630Z">
+<meta property="article:modified_time" content="2025-07-26T04:41:48.772Z">
 <meta property="article:author" content="Bernicegutkowski">
 <meta property="article:tag" content="Fluid">
 <meta name="twitter:card" content="summary_large_image">
@@ -239,14 +239,6 @@
                   
                   
                   
-                  <a class="dropdown-item" href="/navigation/" target="_self">
-                    
-                    <span>Navigation</span>
-                  </a>
-                
-                  
-                  
-                  
                   <a class="dropdown-item" href="/webpicks/" target="_self">
                     
                     <span>Web Picks</span>
@@ -302,7 +294,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          842 words
+          257 words
         
       </span>
     
@@ -313,7 +305,7 @@
         
         
         
-          8 mins
+          3 mins
         
       </span>
     
@@ -355,183 +347,190 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Hexo-Fluid-主题-GitHub-Pages-部署完整教程"><a href="#Hexo-Fluid-主题-GitHub-Pages-部署完整教程" class="headerlink" title="Hexo + Fluid 主题 + GitHub Pages 部署完整教程"></a>Hexo + Fluid 主题 + GitHub Pages 部署完整教程</h1><hr>
-<h2 id="1-安装-Git"><a href="#1-安装-Git" class="headerlink" title="1. 安装 Git"></a>1. 安装 Git</h2><p><strong>Git 是版本控制工具，也是上传博客的基础。</strong></p>
+                <h1 id="Complete-Tutorial-Hexo-Fluid-Theme-GitHub-Pages-Deployment"><a href="#Complete-Tutorial-Hexo-Fluid-Theme-GitHub-Pages-Deployment" class="headerlink" title="Complete Tutorial: Hexo + Fluid Theme + GitHub Pages Deployment"></a>Complete Tutorial: Hexo + Fluid Theme + GitHub Pages Deployment</h1><hr>
+<blockquote>
+<p>Before getting started, you’ll need to register a free account on GitHub, which we’ll use later to deploy our static website. After creating your account, create a new repository with the name <code>&lt;your-username&gt;.github.io</code>. For example, if your username is <code>demo</code>, the repository name should be <code>demo.github.io</code>. You can leave the description blank, select <code>Public</code> so everyone can access your repository, and you don’t need to check the README option. Click <strong>Create repository</strong> to finish. You can find detailed steps online if needed!</p>
+</blockquote>
+<h2 id="1-Install-Git"><a href="#1-Install-Git" class="headerlink" title="1. Install Git"></a>1. Install Git</h2><p><strong>Git is a version control tool and the foundation for uploading your blog.</strong></p>
 <ul>
-<li><p>Windows:<br>  去 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载并安装</p>
+<li><p><strong>Windows:</strong><br>  Go to <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>, download and install using default settings (just keep clicking “Next”)</p>
 </li>
-<li><p>macOS:<br>  在终端执行 <code>git --version</code>，如果没装系统会提示安装 Xcode Command Line Tools，按提示安装即可</p>
+<li><p><strong>macOS:</strong><br>  Run <code>git --version</code> in Terminal. If it’s not installed, the system will prompt you to install Xcode Command Line Tools - just follow the prompts</p>
 </li>
-<li><p>Linux:<br>  使用包管理器安装，例如 <code>sudo apt install git</code></p>
+<li><p><strong>Linux:</strong><br>  Use your package manager, for example: <code>sudo apt install git</code></p>
 </li>
 </ul>
-<p>安装后在终端&#x2F;命令行执行：</p>
+<p>After installation, run this in your terminal&#x2F;command prompt:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git --version<br></code></pre></td></tr></table></figure>
 
-<p>确认显示版本号，表示安装成功。</p>
+<p>If you see a version number, the installation was successful.</p>
 <hr>
-<h2 id="2-安装-Node-js-与-Hexo"><a href="#2-安装-Node-js-与-Hexo" class="headerlink" title="2. 安装 Node.js 与 Hexo"></a>2. 安装 Node.js 与 Hexo</h2><p>Hexo 是基于 Node.js 的博客框架。</p>
+<h2 id="2-Install-Node-js-and-Hexo"><a href="#2-Install-Node-js-and-Hexo" class="headerlink" title="2. Install Node.js and Hexo"></a>2. Install Node.js and Hexo</h2><p>Hexo is a blog framework built on Node.js.</p>
 <ul>
-<li>先安装 Node.js：<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a><br>  推荐安装 LTS 版本（稳定版）</li>
+<li>First, install Node.js: <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a><br>  We recommend installing the LTS version (stable release). Use default settings during installation.</li>
 </ul>
-<p>安装完毕后，打开终端，执行：</p>
+<p>After installation, open your terminal and run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">node -v<br>npm -v<br></code></pre></td></tr></table></figure>
 
-<p>确认都安装成功。</p>
+<p>Make sure both are installed successfully.</p>
 <ul>
-<li>安装 Hexo CLI：</li>
+<li>Install Hexo CLI:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="3-新建-Hexo-博客项目"><a href="#3-新建-Hexo-博客项目" class="headerlink" title="3. 新建 Hexo 博客项目"></a>3. 新建 Hexo 博客项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blog<br><span class="hljs-built_in">cd</span> my-blog<br>npm install<br></code></pre></td></tr></table></figure>
+<h2 id="3-Create-a-New-Hexo-Blog-Project"><a href="#3-Create-a-New-Hexo-Blog-Project" class="headerlink" title="3. Create a New Hexo Blog Project"></a>3. Create a New Hexo Blog Project</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blog<br><span class="hljs-built_in">cd</span> my-blog<br>npm install<br></code></pre></td></tr></table></figure>
 
-<p>此时你已经有一个基础的 Hexo 博客项目。</p>
+<p>You now have a basic Hexo blog project. Run <code>hexo s</code> to preview it at <code>127.0.0.1:4000</code>.</p>
 <hr>
-<h2 id="4-下载-Fluid-主题并安装"><a href="#4-下载-Fluid-主题并安装" class="headerlink" title="4. 下载 Fluid 主题并安装"></a>4. 下载 Fluid 主题并安装</h2><p>Fluid 主题仓库地址：<a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a></p>
-<p>在项目根目录下：</p>
+<h2 id="4-Download-and-Install-the-Fluid-Theme"><a href="#4-Download-and-Install-the-Fluid-Theme" class="headerlink" title="4. Download and Install the Fluid Theme"></a>4. Download and Install the Fluid Theme</h2><p>Fluid theme repository: <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a></p>
+<p>In your project root directory:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/fluid-dev/hexo-theme-fluid.git themes/fluid<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="5-修改-Hexo-配置文件-config-yml"><a href="#5-修改-Hexo-配置文件-config-yml" class="headerlink" title="5. 修改 Hexo 配置文件 _config.yml"></a>5. 修改 Hexo 配置文件 <code>_config.yml</code></h2><p>用你喜欢的编辑器打开项目根目录的 <code>_config.yml</code>，找到</p>
+<h2 id="5-Modify-Hexo-Configuration-File-config-yml"><a href="#5-Modify-Hexo-Configuration-File-config-yml" class="headerlink" title="5. Modify Hexo Configuration File _config.yml"></a>5. Modify Hexo Configuration File <code>_config.yml</code></h2><p>Open the <code>_config.yml</code> file in your project root directory with your preferred editor, and find:</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span><br></code></pre></td></tr></table></figure>
 
-<p>把主题名改为 <code>fluid</code>。可以参考下：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/#%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC">官方教学</a></p>
+<p>Change the theme name to <code>fluid</code>. You can refer to the <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/start/#%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC">official guide</a>. In the _config.yml file, you can configure basic information like website language, name, etc.</p>
 <hr>
-<h2 id="6-配置-Fluid-主题"><a href="#6-配置-Fluid-主题" class="headerlink" title="6. 配置 Fluid 主题"></a>6. 配置 Fluid 主题</h2><p>Fluid 主题自带配置文件在 <code>themes/fluid/_config.yml</code>，将其复制到根目录下更改名称为<br><code>_config.fluid.yml</code>，这样修改配置文件时会拥有更高权限，你可以先用默认配置，后续再调整。</p>
-<p>官方给的说明很详细，有哪些不清楚可以参照下：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">配置教程</a></p>
+<h2 id="6-Configure-the-Fluid-Theme"><a href="#6-Configure-the-Fluid-Theme" class="headerlink" title="6. Configure the Fluid Theme"></a>6. Configure the Fluid Theme</h2><p>The Fluid theme’s configuration file is located at <code>themes/fluid/_config.yml</code>. Copy it to your root directory and rename it to <code>_config.fluid.yml</code>. This gives you higher priority when modifying configuration files. You can start with the default settings and adjust them later.</p>
+<p>The official documentation is very detailed. If you need clarification on anything, check out the <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">configuration tutorial</a>.</p>
 <hr>
-<h2 id="7-本地预览博客"><a href="#7-本地预览博客" class="headerlink" title="7. 本地预览博客"></a>7. 本地预览博客</h2><p>执行：</p>
+<h2 id="7-Preview-Your-Blog-Locally"><a href="#7-Preview-Your-Blog-Locally" class="headerlink" title="7. Preview Your Blog Locally"></a>7. Preview Your Blog Locally</h2><p>Run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo generate<br>hexo server<br></code></pre></td></tr></table></figure>
 
-<p>打开浏览器访问：<a target="_blank" rel="noopener" href="http://localhost:4000/%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%8D%9A%E5%AE%A2%E9%A6%96%E9%A1%B5%E3%80%82">http://localhost:4000/，就可以看到博客首页。</a></p>
+<p>Open your browser and visit <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> to see your blog homepage.</p>
 <hr>
-<h2 id="8-准备部署到-GitHub-Pages"><a href="#8-准备部署到-GitHub-Pages" class="headerlink" title="8. 准备部署到 GitHub Pages"></a>8. 准备部署到 GitHub Pages</h2><h3 id="8-1-创建-GitHub-仓库"><a href="#8-1-创建-GitHub-仓库" class="headerlink" title="8.1 创建 GitHub 仓库"></a>8.1 创建 GitHub 仓库</h3><ul>
-<li><p>登录 GitHub，点击右上角“+” → “New repository”</p>
+<h2 id="8-Prepare-for-GitHub-Pages-Deployment"><a href="#8-Prepare-for-GitHub-Pages-Deployment" class="headerlink" title="8. Prepare for GitHub Pages Deployment"></a>8. Prepare for GitHub Pages Deployment</h2><h3 id="8-1-Create-a-GitHub-Repository"><a href="#8-1-Create-a-GitHub-Repository" class="headerlink" title="8.1 Create a GitHub Repository"></a>8.1 Create a GitHub Repository</h3><ul>
+<li><p>Log into GitHub, click the “+” in the top right corner → “New repository”</p>
 </li>
-<li><p>仓库名写成：<code>&lt;你的GitHub用户名&gt;.github.io</code></p>
+<li><p>Name your repository: <code>&lt;your-GitHub-username&gt;.github.io</code></p>
 </li>
-<li><p>例如用户名叫 <code>yourname</code>，仓库名就是 <code>yourname.github.io</code></p>
+<li><p>For example, if your username is <code>yourname</code>, the repository name should be <code>yourname.github.io</code></p>
 </li>
-<li><p>选择 Public，创建仓库，README不用选</p>
+<li><p>Select Public, create the repository, no need to check README</p>
 </li>
 </ul>
 <hr>
-<h3 id="8-2-Hexo-配置部署信息"><a href="#8-2-Hexo-配置部署信息" class="headerlink" title="8.2 Hexo 配置部署信息"></a>8.2 Hexo 配置部署信息</h3><p>打开项目根目录 <code>_config.yml</code>，找到 <code>deploy</code> 部分，修改为：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/&lt;你的GitHub用户名&gt;/&lt;你的GitHub用户名&gt;.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br></code></pre></td></tr></table></figure>
+<h3 id="8-2-Configure-Hexo-Deployment-Settings"><a href="#8-2-Configure-Hexo-Deployment-Settings" class="headerlink" title="8.2 Configure Hexo Deployment Settings"></a>8.2 Configure Hexo Deployment Settings</h3><p>Open <code>_config.yml</code> in your project root directory, find the <code>deploy</code> section, and modify it to:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/&lt;your-GitHub-username&gt;/&lt;your-GitHub-username&gt;.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br></code></pre></td></tr></table></figure>
 
-<p>注意替换你的用户名。</p>
+<p>Remember to replace with your actual username.</p>
 <hr>
-<h3 id="8-3-安装-Hexo-部署插件"><a href="#8-3-安装-Hexo-部署插件" class="headerlink" title="8.3 安装 Hexo 部署插件"></a>8.3 安装 Hexo 部署插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="9-初始化本地-Git-仓库（如果之前没初始化）"><a href="#9-初始化本地-Git-仓库（如果之前没初始化）" class="headerlink" title="9. 初始化本地 Git 仓库（如果之前没初始化）"></a>9. 初始化本地 Git 仓库（如果之前没初始化）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git add .<br>git commit -m <span class="hljs-string">&quot;Initial commit&quot;</span><br></code></pre></td></tr></table></figure>
+<h3 id="8-3-Install-Hexo-Deployment-Plugin"><a href="#8-3-Install-Hexo-Deployment-Plugin" class="headerlink" title="8.3 Install Hexo Deployment Plugin"></a>8.3 Install Hexo Deployment Plugin</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="10-部署-Hexo-到-GitHub-Pages"><a href="#10-部署-Hexo-到-GitHub-Pages" class="headerlink" title="10. 部署 Hexo 到 GitHub Pages"></a>10. 部署 Hexo 到 GitHub Pages</h2><p>执行：</p>
+<h2 id="9-Initialize-Local-Git-Repository-if-not-already-done"><a href="#9-Initialize-Local-Git-Repository-if-not-already-done" class="headerlink" title="9. Initialize Local Git Repository (if not already done)"></a>9. Initialize Local Git Repository (if not already done)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git add .<br>git commit -m <span class="hljs-string">&quot;Initial commit&quot;</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="10-Deploy-Hexo-to-GitHub-Pages"><a href="#10-Deploy-Hexo-to-GitHub-Pages" class="headerlink" title="10. Deploy Hexo to GitHub Pages"></a>10. Deploy Hexo to GitHub Pages</h2><p>Run:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo generate<br>hexo deploy<br></code></pre></td></tr></table></figure>
 
-<p>这会自动把生成的静态网页推送到 GitHub <code>main</code> 分支。</p>
+<p>This will automatically push the generated static web pages to GitHub’s <code>main</code> branch.</p>
 <hr>
-<h2 id="11-等待-GitHub-Pages-启动"><a href="#11-等待-GitHub-Pages-启动" class="headerlink" title="11. 等待 GitHub Pages 启动"></a>11. 等待 GitHub Pages 启动</h2><p>打开浏览器访问：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//&lt;你的GitHub用户名&gt;.github.io</span><br></code></pre></td></tr></table></figure>
+<h2 id="11-Wait-for-GitHub-Pages-to-Go-Live"><a href="#11-Wait-for-GitHub-Pages-to-Go-Live" class="headerlink" title="11. Wait for GitHub Pages to Go Live"></a>11. Wait for GitHub Pages to Go Live</h2><p>Open your browser and visit:</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//&lt;your-GitHub-username&gt;.github.io</span><br></code></pre></td></tr></table></figure>
 
-<p>几分钟后你的博客就上线了！</p>
+<p>Your blog will be online in a few minutes!</p>
 <hr>
-<h2 id="12-常用命令"><a href="#12-常用命令" class="headerlink" title="12. 常用命令"></a>12. 常用命令</h2><ul>
-<li>写完文章后：</li>
+<h2 id="12-Common-Commands"><a href="#12-Common-Commands" class="headerlink" title="12. Common Commands"></a>12. Common Commands</h2><ul>
+<li>After writing an article:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;post-title&quot;</span><br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>本地预览：</li>
+<li>Local preview:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>生成静态文件：</li>
+<li>Generate static files:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>部署到 GitHub：</li>
+<li>Deploy to GitHub:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>Hexo 部署到 GitHub Pages 的标准流程</li>
+<li>Standard workflow for deploying Hexo to GitHub Pages:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
-<pre><code class="hljs">也可以简写为：
-</code></pre>
+
+<ul>
+<li>Short version:</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo c &amp;&amp; hexo g &amp;&amp; hexo d<br></code></pre></td></tr></table></figure>
 
-<h2 id="解释一下每步："><a href="#解释一下每步：" class="headerlink" title="解释一下每步："></a>解释一下每步：</h2><h2 id="13-进阶"><a href="#13-进阶" class="headerlink" title="13. 进阶"></a>13. 进阶</h2><ul>
-<li><p>修改主题配置文件 <code>themes/fluid/_config.yml</code> 进一步定制主题</p>
+<p>Here’s what each step does:</p>
+<hr>
+<h2 id="13-Advanced-Features"><a href="#13-Advanced-Features" class="headerlink" title="13. Advanced Features"></a>13. Advanced Features</h2><ul>
+<li><p>Modify the theme configuration file <code>themes/fluid/_config.yml</code> to further customize your theme</p>
 </li>
-<li><p>配合 Hexo 插件做 SEO、分析、评论等功能</p>
+<li><p>Use Hexo plugins for SEO, analytics, comments, and other features</p>
 </li>
-<li><p>GitHub Pages 支持自定义域名，可在仓库设置里配置</p>
+<li><p>GitHub Pages supports custom domains, which you can configure in your repository settings</p>
 </li>
 </ul>
 <hr>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><table>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><table>
 <thead>
 <tr>
-<th>步骤</th>
-<th>操作命令</th>
-<th>说明</th>
+<th>Step</th>
+<th>Command</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>安装 Git</td>
+<td>Install Git</td>
 <td><code>git --version</code></td>
-<td>确认安装Git</td>
+<td>Verify Git installation</td>
 </tr>
 <tr>
-<td>安装 Node.js + Hexo CLI</td>
+<td>Install Node.js + Hexo CLI</td>
 <td><code>npm install -g hexo-cli</code></td>
-<td>安装博客核心</td>
+<td>Install blog core</td>
 </tr>
 <tr>
-<td>初始化博客</td>
+<td>Initialize blog</td>
 <td><code>hexo init my-blog</code></td>
-<td>建立项目</td>
+<td>Create project</td>
 </tr>
 <tr>
-<td>安装 Fluid 主题</td>
+<td>Install Fluid theme</td>
 <td><code>git clone ... themes/fluid</code></td>
-<td>下载主题</td>
+<td>Download theme</td>
 </tr>
 <tr>
-<td>设置主题</td>
-<td>修改 <code>_config.yml</code></td>
-<td>改主题名为 fluid</td>
+<td>Set theme</td>
+<td>Modify <code>_config.yml</code></td>
+<td>Change theme name to fluid</td>
 </tr>
 <tr>
-<td>预览</td>
+<td>Preview</td>
 <td><code>hexo server</code></td>
-<td>本地看效果</td>
+<td>View locally</td>
 </tr>
 <tr>
-<td>创建 GitHub 仓库</td>
-<td>网页操作</td>
-<td>用户.github.io</td>
+<td>Create GitHub repository</td>
+<td>Web interface</td>
+<td>username.github.io</td>
 </tr>
 <tr>
-<td>设置部署</td>
-<td>修改 <code>_config.yml</code> + 安装部署插件</td>
-<td>配置远程仓库</td>
+<td>Configure deployment</td>
+<td>Modify <code>_config.yml</code> + install deployment plugin</td>
+<td>Set up remote repository</td>
 </tr>
 <tr>
-<td>部署</td>
+<td>Deploy</td>
 <td><code>hexo deploy</code></td>
-<td>推送静态页面到 GitHub Pages</td>
+<td>Push static pages to GitHub Pages</td>
 </tr>
 <tr>
-<td>访问</td>
-<td>浏览器打开</td>
-<td><a target="_blank" rel="noopener" href="https://用户名.github.io/">https:&#x2F;&#x2F;用户名.github.io</a></td>
+<td>Access</td>
+<td>Browser</td>
+<td><a target="_blank" rel="noopener" href="https://username.github.io/">https://username.github.io</a></td>
 </tr>
 </tbody></table>
 <hr>
